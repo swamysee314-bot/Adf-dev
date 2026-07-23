@@ -1,0 +1,9 @@
+{
+	"name": "swamy-dev",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "eastus"
+}
