@@ -9,6 +9,10 @@
 			"dbname": {
 				"type": "string",
 				"value": "swamy"
+			},
+			"uname": {
+				"type": "string",
+				"value": "swamy"
 			}
 		}
 	},
