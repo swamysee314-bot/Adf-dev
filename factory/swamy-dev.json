@@ -5,6 +5,10 @@
 			"Sname": {
 				"type": "string",
 				"value": "sqlserver2000.database.windows.net"
+			},
+			"dbname": {
+				"type": "string",
+				"value": "swamy"
 			}
 		}
 	},
