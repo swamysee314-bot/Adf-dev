@@ -1,0 +1,12 @@
+{
+	"name": "swamy-dev",
+	"properties": {
+		"globalParameters": {
+			"Sname": {
+				"type": "string",
+				"value": "sqlserver2000.database.windows.net"
+			}
+		}
+	},
+	"location": "eastus"
+}
