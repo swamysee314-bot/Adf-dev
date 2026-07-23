@@ -1,5 +1,5 @@
 {
-	"name": "pipeline3",
+	"name": "CopyAllTableToAnotherTables",
 	"properties": {
 		"activities": [
 			{
@@ -77,15 +77,15 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"sname": {
-								"value": "@pipeline().parameters.sname",
+								"value": "@pipeline().globalParameters.Sname",
 								"type": "Expression"
 							},
 							"dbname": {
-								"value": "@pipeline().parameters.dbname",
+								"value": "@pipeline().globalParameters.dbname",
 								"type": "Expression"
 							},
 							"uname": {
-								"value": "@pipeline().parameters.uname",
+								"value": "@pipeline().globalParameters.uname",
 								"type": "Expression"
 							},
 							"tablename": "ADDRESS",
@@ -98,8 +98,6 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Lookup1",
@@ -155,15 +153,15 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"sname": {
-											"value": "@pipeline().parameters.sname",
+											"value": "@pipeline().globalParameters.Sname",
 											"type": "Expression"
 										},
 										"dbname": {
-											"value": "@pipeline().parameters.dbname",
+											"value": "@pipeline().globalParameters.dbname",
 											"type": "Expression"
 										},
 										"uname": {
-											"value": "@pipeline().parameters.uname",
+											"value": "@pipeline().globalParameters.uname",
 											"type": "Expression"
 										},
 										"tablename": {
@@ -183,15 +181,15 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"sname": {
-											"value": "@pipeline().parameters.sname",
+											"value": "@pipeline().globalParameters.Sname",
 											"type": "Expression"
 										},
 										"dbname": {
-											"value": "@pipeline().parameters.dbname",
+											"value": "@pipeline().globalParameters.dbname",
 											"type": "Expression"
 										},
 										"uname": {
-											"value": "@pipeline().parameters.uname",
+											"value": "@pipeline().globalParameters.uname",
 											"type": "Expression"
 										},
 										"tablename": {
@@ -207,17 +205,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"sname": {
-				"type": "string"
-			},
-			"dbname": {
-				"type": "string"
-			},
-			"uname": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
