@@ -88,14 +88,8 @@
 								"value": "@pipeline().parameters.uname",
 								"type": "Expression"
 							},
-							"tablename": {
-								"value": "@variables('table')",
-								"type": "Expression"
-							},
-							"Schema": {
-								"value": "@variables('schema')",
-								"type": "Expression"
-							}
+							"tablename": "ADDRESS",
+							"Schema": "SALESLT"
 						}
 					},
 					"firstRowOnly": false
@@ -104,6 +98,8 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Lookup1",
@@ -171,11 +167,11 @@
 											"type": "Expression"
 										},
 										"tablename": {
-											"value": "@variables('table')",
+											"value": "@item().TABLE_NAME",
 											"type": "Expression"
 										},
 										"Schema": {
-											"value": "@variables('schema')",
+											"value": "@item().TABLE_SCHEMA",
 											"type": "Expression"
 										}
 									}
@@ -199,7 +195,7 @@
 											"type": "Expression"
 										},
 										"tablename": {
-											"value": "@variables('table')",
+											"value": "@item().TABLE_NAME",
 											"type": "Expression"
 										},
 										"Schema": "source"
@@ -220,14 +216,6 @@
 			},
 			"uname": {
 				"type": "string"
-			}
-		},
-		"variables": {
-			"table": {
-				"type": "String"
-			},
-			"schema": {
-				"type": "String"
 			}
 		},
 		"annotations": []
