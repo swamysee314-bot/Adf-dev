@@ -4,6 +4,12 @@
 	"parameters": {
 		"factoryName": {
 			"value": "swamy-dev"
+		},
+		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
+			"value": "blob-connection"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://kv-dev-swamy.vault.azure.net/"
 		}
 	}
 }
