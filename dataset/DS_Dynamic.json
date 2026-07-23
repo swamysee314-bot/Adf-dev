@@ -1,0 +1,53 @@
+{
+	"name": "DS_Dynamic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "KV_LS_DB",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"sname": {
+					"value": "@dataset().sname",
+					"type": "Expression"
+				},
+				"dbname": {
+					"value": "@dataset().dbname",
+					"type": "Expression"
+				},
+				"username": {
+					"value": "@dataset().uname",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"sname": {
+				"type": "string"
+			},
+			"dbname": {
+				"type": "string"
+			},
+			"uname": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			},
+			"Schema": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().Schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
+		}
+	}
+}
